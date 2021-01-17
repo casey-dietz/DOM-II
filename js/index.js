@@ -18,9 +18,35 @@ body.addEventListener('keydown', (event) => {
     console.log('user is pressing keyboard')
 })
 
-const navBar = document.querySelector('.main-navigation')
+const navLink = document.querySelector('.nav')
 
-navBar.addEventListener('click', (event) => {
+navLink.addEventListener('click', (event) => {
     event.preventDefault()
     console.log('prevented default')
 })
+
+const navBar = document.querySelector('.main-navigation')
+
+navBar.addEventListener('mouseover', (event) => {
+    event.target.style.color = 'dodgerblue';
+    event.target.style.transform = 'scale(1.1)'
+    event.target.style.transition = 'transform 1s'
+    event.stopPropagation();
+  event.target.addEventListener('mouseleave', event => event.target.style.transform = 'scale(1)')
+})
+
+
+
+const headers = document.querySelectorAll('h2')
+
+headers.forEach((element) => {
+    element.addEventListener('click', (event) => {
+        event.target.style.color = 'dodgerblue'
+    })
+})
+
+
+
+
+
+
