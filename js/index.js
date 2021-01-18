@@ -45,6 +45,22 @@ headers.forEach((element) => {
     })
 })
 
+const paragraphs = document.querySelectorAll('p')
+
+paragraphs.forEach((element) => {
+    element.addEventListener('dblclick', (event) => {
+        event.target.style.backgroundColor = 'green'
+    })
+})
+
+const buttons = document.querySelectorAll('.btn')
+
+buttons.forEach((element) => {
+    element.addEventListener('click', (event) => {
+        event.target.style.color = 'black'
+    })
+})
+
 
 
 
